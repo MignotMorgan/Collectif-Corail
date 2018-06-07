@@ -23,7 +23,7 @@ Votre groupe reçoit un projet (un site inexistant ou existant mais pas terrible
 
 ## Résultats
 
- [Lien du website](https://github.com/MignotMorgan/)
+ [Lien du website](https://mignotmorgan.github.io/Collectif-Corail/)
 
  
  ## Crédit
