@@ -32,7 +32,7 @@
 }
 
 #agenda{
-	background-color: yellow;
+	/* background-color: yellow; */
 }
 
 #contact{
@@ -62,4 +62,47 @@
 .footer__corail li a{
 	color: #FFF;
 	text-decoration: none;
+}
+
+.button__slide{
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius: 25%;
+	box-shadow: 5px 5px 5px black;
+}
+.button__slide:active{
+	/* margin-top:5px; */
+	box-shadow: inset 5px 5px 5px black;
+	
+}
+
+
+/*calendar*/
+.agenda {  }
+
+/* Dates */
+.agenda .agenda-date { width: 170px; }
+.agenda .agenda-date .dayofmonth {
+  width: 40px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-right: 10px; 
+}
+.agenda .agenda-date .shortdate {
+  font-size: 0.75em; 
+}
+
+
+/* Times */
+.agenda .agenda-time { width: 140px; } 
+
+
+/* Events */
+.agenda .agenda-events {  } 
+.agenda .agenda-events .agenda-event {  } 
+
+@media (max-width: 767px) {
+    
 }
