@@ -1,0 +1,18 @@
+.footer__corail{
+	background-color: #82a487;
+	width: 100%;
+	height: 10%;
+	background-position: bottom;
+	text-align: center;
+	padding: 10px;
+}
+
+.footer__corail ul{
+	list-style: none;
+}
+
+.footer__corail li{
+	display: inline;
+	padding: 10px;
+
+}
