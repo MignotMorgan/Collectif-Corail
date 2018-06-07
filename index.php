@@ -17,7 +17,15 @@
 			</div>
 
 			<div class="main__slide" id="about_us">
-				
+				<div class="aboutus__container">
+					<div id="video">
+						<h1>About us</h1>
+						<p>Collectif d'artistes, nous proposons des cours, stages, formations et organisation d'événements artistiques (de la conception graphique, à l'animation)</p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/k_MhieA-T34" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						
+					</div>
+					
+				</div>
 			</div>
 
 			<div class="main__slide" id="agenda">
@@ -25,6 +33,10 @@
 			</div>
 
 			<div class="main__slide" id="gallery">
+
+				<div class="gallery__container">
+					
+				</div>
 				
 			</div>
 
@@ -40,6 +52,7 @@
 			<ul>
 				<li><i class="fas fa-map-marker"> Rue Vanderkindere 293 1180 - Bruxelles </i></li>		
 				<li><i class="fas fa-mobile-alt"> 0485 71 73 03 </i></li>
+				<li><i class="fas fa-envelope"></i><a href="#"> corail.collectif@gmail.com</a> </li>
 				<li><i class="fab fa-facebook-square "></i></li>
 				<li><i class="fab fa-facebook-messenger"></i></li>
 				<li><i class="fab fa-youtube"></i></li>
@@ -55,4 +68,5 @@
 	</section>
 
 </body>
+<script type="text/javascript" src="main.js"></script>
 </html>
