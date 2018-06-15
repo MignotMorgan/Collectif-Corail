@@ -1,3 +1,6 @@
+
+
+/**fonction de la roulette de la souris */
 let wheelMain = (e) => {
 	e.preventDefault();
 	let delta=e.deltaY
@@ -6,6 +9,7 @@ let wheelMain = (e) => {
 	document.documentElement.scrollLeft += delta;
 	// console.log(document.documentElement.scrollLeft);
 }
+/**fonction du défilement horizontale du bouton inclus dans le footer. */
 let screenWidth = document.documentElement.clientWidth;
 let clickSlide = (e) => {
 	let scrollLeft = Math.ceil(document.documentElement.scrollLeft/screenWidth)*screenWidth;
@@ -15,7 +19,7 @@ let clickSlide = (e) => {
 	else
 		document.documentElement.scrollLeft = scrollLeft;
 }
-
+/**évènement du chargement de la page. */
 window.onload=()=>{
 	window.addEventListener("wheel", wheelMain);
 }
