@@ -1,6 +1,15 @@
 body{
 	overflow-y: hidden;
 }
+#btn__img__arrow_circle{
+	position: absolute;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	left:calc(100vw - 100px);
+	top:calc(50vh - 50px);
+
+}
 .main__container{
 	/*display: flex;
 	flex-direction: row*/
@@ -108,8 +117,8 @@ body{
 #lobby{
 
 	background-image: url("../img/lobby.jpg");
-	background-color: rgb(0, 247, 255);
 	background-size : 100vw 90vh;
+	background-color: rgb(0, 247, 255);
 	/*background-repeat: no-repeat;*/
     background-attachment: fixed;
 	
@@ -118,19 +127,25 @@ body{
 }
 
 #about_us{
-	background-color: blue;
-}
-
-#gallery{
-	background-color: grey;
+	background-image: url("../img/stageartistique.jpg");
+	background-size : 100vw 90vh;
+	background-color: rgb(0, 247, 255);
 }
 
 #agenda{
-	/* background-color: yellow; */
+	background-image: url("../img/enfants.jpg");
+	background-size : 100vw 90vh;
+	background-color: rgb(0, 247, 255);
+}
+
+#gallery{
+	background-color: rgb(0, 247, 255);
 }
 
 #contact{
-	background-color: green;
+	background-image: url("../img/livre.jpg");
+	background-size : 100vw 90vh;
+	background-color: rgb(0, 247, 255);
 }
 .footer__corail{
 	background-color: #4594b5;
@@ -158,16 +173,23 @@ body{
 	text-decoration: none;
 }
 
-.button__slide{
+/* .button__slide{
 	display: inline-block;
 	padding: 5px 15px;
 	border-radius: 25%;
 	box-shadow: 5px 5px 5px black;
 }
 .button__slide:active{
-	/* margin-top:5px; */
 	box-shadow: inset 5px 5px 5px black;
-	
+} */
+.button__slide{
+	display: inline-block;
+	width:100px;
+	height:50px;
+	background-color: transparent;
+	border-color: transparent;
+	background-image: url("../img/fleche.png");
+	background-size: cover;
 }
 
 
@@ -247,21 +269,22 @@ body{
   color: white;
   text-align: center;
   transition: transform 1s, opacity 1s;
+  background-size: cover;
 }
 
-.carousel__cell:nth-child(1) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(2) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(3) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(4) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(5) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(6) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(7) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(8) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(9) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(10) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(11) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(12) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(13) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(14) { background-image: url("../img/lobby.jpg"); }
-.carousel__cell:nth-child(15) { background-image: url("../img/lobby.jpg"); }
+.carousel__cell:nth-child(1) { background-image: url("../img/caroussel/photo_01.jpg"); }
+.carousel__cell:nth-child(2) { background-image: url("../img/caroussel/photo_02.jpg"); }
+.carousel__cell:nth-child(3) { background-image: url("../img/caroussel/photo_03.jpg"); }
+.carousel__cell:nth-child(4) { background-image: url("../img/caroussel/photo_04.jpg"); }
+.carousel__cell:nth-child(5) { background-image: url("../img/caroussel/photo_05.jpg"); }
+.carousel__cell:nth-child(6) { background-image: url("../img/caroussel/photo_06.jpg"); }
+.carousel__cell:nth-child(7) { background-image: url("../img/caroussel/photo_07.jpg"); }
+.carousel__cell:nth-child(8) { background-image: url("../img/caroussel/photo_08.jpg"); }
+.carousel__cell:nth-child(9) { background-image: url("../img/caroussel/photo_09.jpg"); }
+.carousel__cell:nth-child(10) { background-image: url("../img/caroussel/photo_10.jpg"); }
+.carousel__cell:nth-child(11) { background-image: url("../img/caroussel/photo_11.jpg"); }
+.carousel__cell:nth-child(12) { background-image: url("../img/caroussel/photo_12.jpg"); }
+.carousel__cell:nth-child(13) { background-image: url("../img/caroussel/photo_13.jpg"); }
+.carousel__cell:nth-child(14) { background-image: url("../img/caroussel/photo_14.jpg"); }
+.carousel__cell:nth-child(15) { background-image: url("../img/caroussel/photo_15.jpg"); }
 
