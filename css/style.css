@@ -8,11 +8,29 @@ body{
 	height: 100px;
 	left:calc(100vw - 100px);
 	top:calc(50vh - 50px);
-
+	border-radius:50%;
+}
+#btn__img__arrow_circle:hover{
+	border: 1px solid black;
+	box-shadow: inset 5px 5px 5px black;
+}
+.btn__img__arrow_circle_animation{
+	animation-name: btn__circle;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-play-state: initial;
+	animation-timing-function: ease;
+}
+@keyframes btn__circle{
+	0%{
+		left:calc(100vw - 100px);
+	}
+	100%{
+		left:calc(100vw - 150px);
+	}
 }
 .main__container{
-	/*display: flex;
-	flex-direction: row*/
 	width: 500vw;
 	height: 90vh;
 	display: flex
@@ -33,11 +51,8 @@ body{
 
 	animation-name: imageUp;
 	animation-duration: 30s;
-	/* animation-direction: alternate; */
 	animation-iteration-count: infinite;
-    /* animation-fill-mode: forwards; */
-    animation-timing-function: ease;
-	
+    animation-timing-function: ease;	
 }
 #img__down{
 	position: absolute;
@@ -47,9 +62,7 @@ body{
 
 	animation-name: imageDown;
 	animation-duration: 30s;
-	/* animation-direction: alternate; */
 	animation-iteration-count: infinite;
-    /* animation-fill-mode: forwards; */
     animation-timing-function: ease;
 	
 }
@@ -118,37 +131,31 @@ body{
 
 	background-image: url("../img/lobby.jpg");
 	background-size : 100vw 90vh;
-	background-color: rgb(0, 247, 255);
-	/*background-repeat: no-repeat;*/
     background-attachment: fixed;
-	
-
-
 }
 
 #about_us{
 	background-image: url("../img/stageartistique.jpg");
 	background-size : 100vw 90vh;
-	background-color: rgb(0, 247, 255);
 }
 
 #agenda{
 	background-image: url("../img/enfants.jpg");
 	background-size : 100vw 90vh;
-	background-color: rgb(0, 247, 255);
 }
 
 #gallery{
-	background-color: rgb(0, 247, 255);
+	background-image: url("../img/caroussel.jpg");
+	background-size : 100vw 90vh;
 }
 
 #contact{
 	background-image: url("../img/livre.jpg");
 	background-size : 100vw 90vh;
-	background-color: rgb(0, 247, 255);
 }
 .footer__corail{
-	background-color: #4594b5;
+	background-color: #2f6379;
+	/* background-color: #4594b5; */
 	width: 100vw;
 	height: 10vh;
 	background-position: bottom;
@@ -173,15 +180,6 @@ body{
 	text-decoration: none;
 }
 
-/* .button__slide{
-	display: inline-block;
-	padding: 5px 15px;
-	border-radius: 25%;
-	box-shadow: 5px 5px 5px black;
-}
-.button__slide:active{
-	box-shadow: inset 5px 5px 5px black;
-} */
 .button__slide{
 	display: inline-block;
 	width:100px;
@@ -190,6 +188,24 @@ body{
 	border-color: transparent;
 	background-image: url("../img/fleche.png");
 	background-size: cover;
+
+}
+.button__slide:hover{
+	animation-name: btnSlide;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+
+}
+@keyframes btnSlide{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-15deg);
+	}
+	100%{
+		transform: rotate(15deg);
+	}
 }
 
 
@@ -223,24 +239,15 @@ body{
     
 }
 
-/****************/
-/** Carousel 3D */
-/****************/
+/******************************************/
+/********** Carousel 3D *******************/
+/******************************************/
 * { box-sizing: border-box; }
-
-/* body {
-  font-family: sans-serif;
-  text-align: center;
-} */
-
 .scene {
-  /* border: 1px solid #CCC; */
   margin: 40px 0;
   position: relative;
   width: 60vw;
   height:60vh;
-  /* width: 210px; */
-  /* height: 140px; */
   margin: 80px auto;
   perspective: 1000px;
 }
@@ -256,13 +263,10 @@ body{
 
 .carousel__cell {
   position: absolute;
-  /* width: 190px;
-  height: 120px; */
   width:50vw;
   height:50vh;
   left: 10px;
   top: 10px;
-  /* border: 2px solid black; */
   line-height: 116px;
   font-size: 80px;
   font-weight: bold;
