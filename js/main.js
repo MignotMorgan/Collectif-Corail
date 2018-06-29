@@ -3,26 +3,28 @@ const slides = document.querySelectorAll(".main__slide");
 /**fonction de la roulette de la souris pour le scrolling horizontale */
 let wheelMain = (e) => {
 	e.preventDefault();
-	let screenWidth = document.documentElement.clientWidth;
+	let elem = document.body;
+	let screenWidth = elem.clientWidth;
 	let delta=screenWidth*0.2;//e.deltaY
 	if(e.deltaY < 0)
-		document.documentElement.scrollLeft -= delta;
+		elem.scrollLeft -= delta;
 	else
-		document.documentElement.scrollLeft += delta;
+		elem.scrollLeft += delta;
 }
 /**fonction du défilement horizontale */
 let scrollSlide = () => {
-	let screenWidth = document.documentElement.clientWidth;
-	let currentSlide = Math.ceil(document.documentElement.scrollLeft/screenWidth);
+	let elem = document.body;
+	let screenWidth = elem.clientWidth;
+	let currentSlide = Math.ceil(elem.scrollLeft/screenWidth);
 	if(currentSlide >= slides.length-1){
-		document.documentElement.scrollLeft = 0;
+		elem.scrollLeft = 0;
 	}
 	else{
 		let scrollLeft = currentSlide*screenWidth;
-		if(document.documentElement.scrollLeft == scrollLeft)
-			document.documentElement.scrollLeft += screenWidth;
+		if(elem.scrollLeft == scrollLeft)
+			elem.scrollLeft += screenWidth;
 		else
-			document.documentElement.scrollLeft = scrollLeft;
+			elem.scrollLeft = scrollLeft;
 	}
 
 }
