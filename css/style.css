@@ -1,0 +1,294 @@
+body{
+	overflow-y: hidden;
+}
+#btn__img__arrow_circle{
+	position: absolute;
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	left:calc(100vw - 100px);
+	top:calc(50vh - 50px);
+	border-radius:50%;
+}
+#btn__img__arrow_circle:hover{
+	border: 1px solid black;
+	box-shadow: inset 5px 5px 5px black;
+}
+.btn__img__arrow_circle_animation{
+	animation-name: btn__circle;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-play-state: initial;
+	animation-timing-function: ease;
+}
+@keyframes btn__circle{
+	0%{
+		left:calc(100vw - 100px);
+	}
+	100%{
+		left:calc(100vw - 150px);
+	}
+}
+.main__container{
+	width: 500vw;
+	height: 90vh;
+	display: flex
+}
+
+.main__slide{
+	height: 90vh;
+	width: 100%;
+	display: inline-block;
+
+}
+
+#img__up{
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+	top:-100vh;
+
+	animation-name: imageUp;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+    animation-timing-function: ease;	
+}
+#img__down{
+	position: absolute;
+	width: 100vw;
+	height: 90vh;
+	top:100vh;
+
+	animation-name: imageDown;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+    animation-timing-function: ease;
+	
+}
+@keyframes imageUp{
+	0%{
+		top:-100vh;
+		opacity: 1;
+	}
+	30%{
+		top:-100vh;
+		opacity: 1;
+	}
+	45%{
+		top:0vh;
+		opacity: 1;
+	}
+	60%{
+		top:0vh;
+		opacity: 0;
+	}
+	70%{
+		top:0vh;		
+		opacity: 1;
+	}
+	85%{
+		top:-100vh;		
+		opacity: 1;
+	}
+	100%{
+		top:-100vh;		
+		opacity: 1;
+	}
+}
+@keyframes imageDown{
+	0%{
+		top:100vh;
+		opacity: 1;
+	}
+	30%{
+		top:100vh;
+		opacity: 1;
+	}
+	45%{
+		top:100vh;
+		opacity: 1;
+	}
+	60%{
+		top:0vh;
+		opacity: 1;
+	}
+	70%{
+		top:0vh;
+		opacity: 0;
+	}
+	85%{
+		top:0vh;
+		opacity: 1;
+	}
+	100%{
+		top:100vh;		
+		opacity: 1;
+	}
+}
+
+#lobby{
+
+	background-image: url("../img/lobby.jpg");
+	background-size : 100vw 90vh;
+    background-attachment: fixed;
+}
+
+#about_us{
+	background-image: url("../img/stageartistique.jpg");
+	background-size : 100vw 90vh;
+}
+
+#agenda{
+	background-image: url("../img/enfants.jpg");
+	background-size : 100vw 90vh;
+}
+
+#gallery{
+	background-image: url("../img/caroussel.jpg");
+	background-size : 100vw 90vh;
+}
+
+#contact{
+	background-image: url("../img/livre.jpg");
+	background-size : 100vw 90vh;
+}
+.footer__corail{
+	background-color: #2f6379;
+	/* background-color: #4594b5; */
+	width: 100vw;
+	height: 10vh;
+	background-position: bottom;
+	text-align: center;
+	padding: 10px;
+	color: #FFF;
+	position: fixed;
+}
+
+.footer__corail ul{
+	list-style: none;
+}
+
+.footer__corail li{
+	display: inline;
+	padding: 10px;
+
+}
+
+.footer__corail li a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.button__slide{
+	display: inline-block;
+	width:100px;
+	height:50px;
+	background-color: transparent;
+	border-color: transparent;
+	background-image: url("../img/fleche.png");
+	background-size: cover;
+
+}
+.button__slide:hover{
+	animation-name: btnSlide;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+
+}
+@keyframes btnSlide{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-15deg);
+	}
+	100%{
+		transform: rotate(15deg);
+	}
+}
+
+
+/*calendar*/
+.agenda {  }
+
+/* Dates */
+.agenda .agenda-date { width: 170px; }
+.agenda .agenda-date .dayofmonth {
+  width: 40px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-right: 10px; 
+}
+.agenda .agenda-date .shortdate {
+  font-size: 0.75em; 
+}
+
+
+/* Times */
+.agenda .agenda-time { width: 140px; } 
+
+
+/* Events */
+.agenda .agenda-events {  } 
+.agenda .agenda-events .agenda-event {  } 
+
+@media (max-width: 767px) {
+    
+}
+
+/******************************************/
+/********** Carousel 3D *******************/
+/******************************************/
+* { box-sizing: border-box; }
+.scene {
+  margin: 40px 0;
+  position: relative;
+  width: 60vw;
+  height:60vh;
+  margin: 80px auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.carousel__cell {
+  position: absolute;
+  width:50vw;
+  height:50vh;
+  left: 10px;
+  top: 10px;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: transform 1s, opacity 1s;
+  background-size: cover;
+}
+
+.carousel__cell:nth-child(1) { background-image: url("../img/caroussel/photo_01.jpg"); }
+.carousel__cell:nth-child(2) { background-image: url("../img/caroussel/photo_02.jpg"); }
+.carousel__cell:nth-child(3) { background-image: url("../img/caroussel/photo_03.jpg"); }
+.carousel__cell:nth-child(4) { background-image: url("../img/caroussel/photo_04.jpg"); }
+.carousel__cell:nth-child(5) { background-image: url("../img/caroussel/photo_05.jpg"); }
+.carousel__cell:nth-child(6) { background-image: url("../img/caroussel/photo_06.jpg"); }
+.carousel__cell:nth-child(7) { background-image: url("../img/caroussel/photo_07.jpg"); }
+.carousel__cell:nth-child(8) { background-image: url("../img/caroussel/photo_08.jpg"); }
+.carousel__cell:nth-child(9) { background-image: url("../img/caroussel/photo_09.jpg"); }
+.carousel__cell:nth-child(10) { background-image: url("../img/caroussel/photo_10.jpg"); }
+.carousel__cell:nth-child(11) { background-image: url("../img/caroussel/photo_11.jpg"); }
+.carousel__cell:nth-child(12) { background-image: url("../img/caroussel/photo_12.jpg"); }
+.carousel__cell:nth-child(13) { background-image: url("../img/caroussel/photo_13.jpg"); }
+.carousel__cell:nth-child(14) { background-image: url("../img/caroussel/photo_14.jpg"); }
+.carousel__cell:nth-child(15) { background-image: url("../img/caroussel/photo_15.jpg"); }
+

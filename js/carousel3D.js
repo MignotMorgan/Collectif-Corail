@@ -26,7 +26,7 @@ function changeCarousel() {
     var cell = cells[i];
     if ( i < cellCount ) {
       // visible cell
-      cell.style.opacity = 0.8;//1;
+      cell.style.opacity = 1;//1;
       var cellAngle = theta * i;
       cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
     } else {
