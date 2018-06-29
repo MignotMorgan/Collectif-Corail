@@ -3,7 +3,7 @@ const slides = document.querySelectorAll(".main__slide");
 /**fonction de la roulette de la souris pour le scrolling horizontale */
 let wheelMain = (e) => {
 	e.preventDefault();
-	let elem = document.body;
+	let elem = document.documentElement;
 	let screenWidth = elem.clientWidth;
 	let delta=screenWidth*0.2;//e.deltaY
 	if(e.deltaY < 0)
@@ -13,7 +13,7 @@ let wheelMain = (e) => {
 }
 /**fonction du défilement horizontale */
 let scrollSlide = () => {
-	let elem = document.body;
+	let elem = document.documentElement;
 	let screenWidth = elem.clientWidth;
 	let currentSlide = Math.ceil(elem.scrollLeft/screenWidth);
 	if(currentSlide >= slides.length-1){
